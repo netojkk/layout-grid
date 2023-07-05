@@ -11,38 +11,39 @@
     /* Neutral colors */
     --cor5: hsl(210, 46%, 95%);
 }
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-   
+    
 
     font-family: 'Red Hat Display', sans-serif;
     font-size: .8em;
 
     background-color: hsl(0, 0%, 81%);
-
-
-    display: grid;
-    justify-content:center ;
-    align-content: center ;
+    
+    
 }
 
 main.conteiner {
-    height: 70vh;
+    
     width: 80vw;
 
     display: grid;
+    justify-content: center;
     align-content: center;
     
     grid-template-columns: repeat(4, minmax(220px, 1fr));
-    grid-template-rows: 1fr 1fr;
     grid-gap: 2em;
     grid-template-areas:
         "roxa roxa cinza branco-g"
         "branco-p preto preto branco-g";
+    
+    
+    margin: 30px auto 20px auto;
 
     transition: width .3s, height .3s;
 }
@@ -89,6 +90,9 @@ p {
 }
 
 .conteiner-box {
+  
+    
+
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-row: 1fr;
@@ -107,8 +111,7 @@ div.roxa {
     grid-area: roxa;
     background-color: var(--cor1);
     border-radius: 8px;
-
-    color: var(--cor5);
+     color: var(--cor5);
 
 
 
@@ -131,10 +134,7 @@ div.cinza {
     color: var(--cor5);
 }
 
-.main- {
-    width: 180px;
-    margin-left: -1.6em;
-}
+
 
 #img-cinza {
     background-image: url(../images/image-jonathan.jpg);
@@ -194,18 +194,16 @@ div.preto {
 
 @media screen and (max-width: 1130px) {
     body {
-        width: 100%;
+     
     }
     main.conteiner {
+        
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
             "roxa cinza"
             "branco-p preto"
-            "branco-g branco-g";
-
-        height: 70vh;
-
+            "branco-g f" ;
     }
 
     @media screen and (max-width: 700px) {
@@ -215,7 +213,7 @@ div.preto {
            
         }
         main.conteiner {
-            
+            display: grid;
             grid-template-columns: 1fr;
             
             grid-template-areas:
