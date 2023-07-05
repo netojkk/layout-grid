@@ -16,7 +16,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 94vh;
+    height: 100vh;
    
 
     font-family: 'Red Hat Display', sans-serif;
@@ -31,16 +31,20 @@ body {
 }
 
 main.conteiner {
-    height: 80vh;
+    height: 70vh;
     width: 80vw;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+    
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
     grid-template-rows: 1fr 1fr;
     grid-gap: 2em;
     grid-template-areas:
         "roxa roxa cinza branco-g"
         "branco-p preto preto branco-g";
+
+    transition: width .3s, height .3s;
 }
 
 div.img {
@@ -68,7 +72,8 @@ div h3 {
     font-weight: 600;
 }
 
-div h1,
+div 
+h1,
 h2,
 h3,
 p {
@@ -93,7 +98,8 @@ p {
 }
 
 .main-p {
-    width: 180px;
+    max-width: 180px;
+    width: 100%;
     margin-left: -1.6em;
 }
 
@@ -186,7 +192,7 @@ div.preto {
     background-image: url(../images/image-patrick.jpg);
 }
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 1130px) {
     body {
         width: 100%;
     }
@@ -198,7 +204,7 @@ div.preto {
             "branco-p preto"
             "branco-g branco-g";
 
-
+        height: 70vh;
 
     }
 
