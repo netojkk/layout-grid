@@ -90,9 +90,6 @@ p {
 }
 
 .conteiner-box {
-  
-    
-
     display: grid;
     grid-template-columns: 50px 1fr;
     grid-row: 1fr;
@@ -111,9 +108,13 @@ div.roxa {
     grid-area: roxa;
     background-color: var(--cor1);
     border-radius: 8px;
-     color: var(--cor5);
+    color: var(--cor5);
 
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 70px top 0px;
 
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.575);
 
 }
 
@@ -124,6 +125,7 @@ div.roxa {
 
 #img-roxa {
     background-image: url(../images/image-daniel.jpg);
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
 
 }
 
@@ -132,6 +134,7 @@ div.cinza {
     background-color: var(--cor2);
     border-radius: 8px;
     color: var(--cor5);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.575);
 }
 
 
@@ -148,6 +151,7 @@ div.branco-g {
     background-color: white;
     border-radius: 8px;
     color: var(--cor2);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.575);
 }
 
 #img-branco-g {
@@ -173,6 +177,7 @@ div.branco-p {
     background-color: white;
     border-radius: 8px;
     color: var(--cor2);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.575);
 
 }
 
@@ -185,11 +190,13 @@ div.preto {
     background-color: var(--cor3);
     border-radius: 8px;
     color: var(--cor5);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.575);
 }
 
 
 #img-preto {
     background-image: url(../images/image-patrick.jpg);
+    border: 2px solid hsl(263, 55%, 52%);
 }
 
 @media screen and (max-width: 1130px) {
@@ -199,10 +206,10 @@ div.preto {
     main.conteiner {
         
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows:  1fr 260px 1fr;
         grid-template-areas:
-            "roxa cinza"
-            "branco-p preto"
+            "roxa preto"
+            "branco-p cinza"
             "branco-g f" ;
     }
 
@@ -215,7 +222,7 @@ div.preto {
         main.conteiner {
             display: grid;
             grid-template-columns: 1fr;
-            
+            grid-template-rows: 1fr  200px 200px 1fr 1fr;
             grid-template-areas:
                 "roxa "
                 "cinza"
